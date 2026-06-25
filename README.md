@@ -6,7 +6,7 @@ This is a VScode plugin for translating Chinese annotations into English
 - [中文](#中文)
 
 ### <span id="english">English</span>
-This resource is used for translating Chinese annotations into English annotations. The resource is located in Branches.
+This resource is used for translating Chinese annotations into English annotations. The resource is located in master.
 
 ### <span id="中文">中文</span>
-本资源是用来讲中文注释翻译并替换成英文注释，资源在Branches里
+本资源是用来讲中文注释翻译并替换成英文注释，资源在master里

@@ -1,0 +1,64 @@
+{
+  "name": "chinese-comment-translator",
+  "displayName": "Chinese Comment Translator",
+  "description": "Translate Chinese comments to English in your code with a shortcut",
+  "version": "1.0.0",
+  "publisher": "your-publisher-name",
+  "engines": {
+    "vscode": "^1.85.0"
+  },
+  "categories": [
+    "Other"
+  ],
+  "activationEvents": [],
+  "main": "./out/extension.js",
+  "contributes": {
+    "commands": [
+      {
+        "command": "chineseCommentTranslator.translate",
+        "title": "Translate Chinese Comments to English"
+      }
+    ],
+    "keybindings": [
+      {
+        "command": "chineseCommentTranslator.translate",
+        "key": "ctrl+shift+t",
+        "mac": "cmd+shift+t",
+        "when": "editorTextFocus"
+      }
+    ],
+    "configuration": {
+      "title": "Chinese Comment Translator",
+      "properties": {
+        "chineseCommentTranslator.keepOriginalComment": {
+          "type": "boolean",
+          "default": false,
+          "description": "Keep the original Chinese comment after translation (as a comment above)"
+        },
+        "chineseCommentTranslator.translationDelay": {
+          "type": "number",
+          "default": 300,
+          "description": "Delay between translations in milliseconds (to avoid API rate limiting)"
+        }
+      }
+    }
+  },
+  "scripts": {
+    "vscode:prepublish": "npm run compile",
+    "compile": "tsc -p ./",
+    "watch": "tsc -watch -p ./",
+    "pretest": "npm run compile",
+    "lint": "eslint src --ext ts"
+  },
+  "devDependencies": {
+    "@types/node": "^20.10.0",
+    "@types/vscode": "^1.85.0",
+    "@typescript-eslint/eslint-plugin": "^6.13.0",
+    "@typescript-eslint/parser": "^6.13.0",
+    "eslint": "^8.55.0",
+    "typescript": "^5.3.0"
+  },
+  "dependencies": {
+    "axios": "^1.6.0"
+  }
+}

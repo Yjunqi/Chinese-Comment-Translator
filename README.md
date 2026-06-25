@@ -1,6 +1,7 @@
 # Chinese Comment Translator
 
 一个 VS Code 扩展，通过快捷键将代码中的中文注释自动翻译成英文。
+本人用于当嵌入式代码如果使用中文，在不同的环境下可能会有相关乱码，对此，本人使用这个VScode插件用来翻译替换
 
 ## 功能特性
 
@@ -81,18 +82,12 @@ npm run compile
 # 按 F5 启动调试，会打开一个新的 VS Code 窗口
 ```
 
-### 打包发布
-
-```bash
-# 安装 vsce 工具
-npm install -g @vscode/vsce
-
-# 打包为 .vsix 文件
-vsce package
+### 简单使用
 
 # 本地安装测试
 code --install-extension chinese-comment-translator-1.0.0.vsix
 ```
+插件在Releases
 
 ## 注意事项
 
